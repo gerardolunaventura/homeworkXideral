@@ -1,0 +1,45 @@
+package classExercise;
+
+public class FacebookAddFriend1 {
+
+	public static void main(String[] args) {
+		//configure el navegador
+		setUp("chrome","facebook.com");
+		//Iniciar sesión
+		iniciarSesion("onavarro@kuesky.com","Test@1234");
+		//Buscar a la persona
+		buscarPersona("Marcela Alegria");
+		//Validar que exita la persona que busque
+		validarPersonaExiste("Marcela Alegria");
+		//Enviar solicitud de amistad
+		enviarSolicitud("Marcela Alegria");
+	}
+
+	private static void setUp(String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void iniciarSesion(String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void buscarPersona(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void validarPersonaExiste(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void enviarSolicitud(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+
+}

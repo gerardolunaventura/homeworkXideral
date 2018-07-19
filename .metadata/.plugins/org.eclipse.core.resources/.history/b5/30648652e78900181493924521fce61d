@@ -1,0 +1,64 @@
+package classExercise;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FacebookAddFriend1 {
+	static WebDriver driver;
+
+	public static void main(String[] args) {
+		//configure el navegador
+		setUp("chrome","facebook.com");
+		//Iniciar sesión
+		iniciarSesion("marcosjuareztest2018@gmail.com","xideral2018");
+		//Buscar a la persona
+		buscarPersona("Pablo Juarez");
+		//Validar que exita la persona que busque
+		validarPersonaExiste("Pablo Juarez");
+		//Enviar solicitud de amistad
+		enviarSolicitud("Pablo Juarez");
+	}
+
+	private static void setUp(String navegator, String sitio) {
+		driver = new ChromeDriver(); 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(sitio);
+		
+	}
+
+	private static void iniciarSesion(String usuario, String contrasena) {	
+	    WebElement userBox = driver.findElement(By.id("email"));
+	    WebElement pssBox = driver.findElement(By.id("pss"));
+	    WebElement entrar = driver.findElement(By.xpath("//input[@value=\"Entrar\"]"));
+	    
+	    userBox.clear();
+	    userBox.sendKeys(usuario);
+	    pssBox.clear();
+	    pssBox.sendKeys(contrasena);
+	    entrar.click();
+	    
+	}
+	
+
+	private static void buscarPersona(String string) {	
+		//WebElement buscar = driver.findElement(By.id())
+		
+	}
+
+	private static void validarPersonaExiste(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void enviarSolicitud(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+
+}

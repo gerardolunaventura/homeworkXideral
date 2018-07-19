@@ -1,0 +1,82 @@
+package classExercise;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FacebookAddFriend1 {
+	static WebDriver driver;
+
+	public static void main(String[] args) {
+		//configure el navegador
+		setUp("chrome","https://www.facebook.com");
+		//Iniciar sesión
+		iniciarSesion("zgtvtddtip_1531850905@tfbnw.net","xideral2018");
+		//Buscar a la persona
+		buscarPersona("Ruth Albgdfldajh Warmanstein");
+		//Validar que exita la persona que busque
+		validarPersonaExiste("Ruth Albgdfldajh Warmanstein");
+		//Enviar solicitud de amistad
+		enviarSolicitud("Ruth Albgdfldajh Warmanstein");
+	}
+
+	private static void setUp(String navegator, String sitio) {
+		if(navegator.toString().equals(navegator)){
+			System.setProperty("webdriver.chrome.driver","C:\\test_automation\\drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.get(sitio);
+		}
+		else {
+			System.out.println("Se desconoce el navagador\n");  
+		}
+
+	}
+
+	private static void iniciarSesion(String usuario, String contrasena) {	
+	    WebElement userBox = driver.findElement(By.id("email"));
+	    WebElement pssBox = driver.findElement(By.id("pass"));
+	    WebElement entrar = driver.findElement(By.xpath("//input[@value=\"Entrar\"]"));
+	    
+	    userBox.clear();
+	    userBox.sendKeys(usuario);
+	    pssBox.clear();
+	    pssBox.sendKeys(contrasena);
+	    entrar.click();
+	    
+	}
+	
+
+	private static void buscarPersona(String persona) {	
+		
+		WebElement persona1 = driver.findElement(By.xpath("//input[@type=\"text\"]"));
+		WebElement buscar = driver.findElement(By.xpath("//button[@class=\"_42ft _4jy0 _4w98 _4jy3 _517h _51sy _4w97\"]"));
+		persona1.clear();
+		persona1.sendKeys(persona);
+		buscar.submit();
+	}
+
+	private static void validarPersonaExiste(String persona) {
+		//WebElement persona1 = driver.findElement(By.xpath("//input[@type=\"text\"]"));
+		//WebElement persona1 = driver.findElement(By.xpath("//div[@])"));
+		//persona1.clear();
+		//persona1.sendKeys(persona);
+		
+		
+	}
+
+	private static void enviarSolicitud(String persona) {
+		
+	//	WebElement persona1 = driver.findElement(By.xpath("//input[@type=\"text\"]"));
+	//	WebElement solicitud = driver.findElement(By.xpath("//button[@aria-label=\"Agregar a amigos\"]"));
+	//	persona1.clear();
+	//	persona1.sendKeys(persona);
+	//	solicitud.click();
+	}
+	
+
+
+}

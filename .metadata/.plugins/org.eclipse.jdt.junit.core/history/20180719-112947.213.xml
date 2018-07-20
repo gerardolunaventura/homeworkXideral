@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="FacebookJUnitExample" project="junitWebDriver" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="facebook.FacebookJUnitExample" time="15.554">
-    <testsuite name="testFacebookLogin" time="15.554">
-      <testcase name="[0] chrome,http://facebook.com,zgtvtddtip_1531850905@tfbnw.net,xideral2018,Charmin Romero,Ullrich Albgcgfhaiijh Dingleman (testFacebookLogin)" classname="facebook.FacebookJUnitExample" time="15.554"/>
-    </testsuite>
-  </testsuite>
-</testrun>
